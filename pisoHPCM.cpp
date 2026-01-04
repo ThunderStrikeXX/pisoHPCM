@@ -807,6 +807,15 @@ int main() {
             outer_l++;
         }
 
+        // Update fluid properties
+        for (int i = 0; i < N; i++) {
+
+            rho_l[i] = liquid_sodium::rho(T_l[i]);
+            mu_l[i] = liquid_sodium::mu(T_l[i]);
+            k_l[i] = liquid_sodium::k(T_l[i]);
+            cp_l[i] = liquid_sodium::cp(T_l[i]);
+        }
+
         // ===============================================================
         // OUTPUT
         // ===============================================================
